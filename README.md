@@ -1,18 +1,6 @@
-## Welcome to GitHub Pages
+# Welcome to XinCanSi Pages
 
-You can use the [editor on GitHub](https://github.com/MarKeBoLuo/XinCanSi.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
-
-```markdown
-Syntax highlighted code block
+You can use the (https://markeboluo.github.io/XinCanSi/) to preview the content.
 
 # Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
 **Bold** and _Italic_ and `Code` text
