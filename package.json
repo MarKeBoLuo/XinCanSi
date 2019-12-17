@@ -1,0 +1,49 @@
+{
+  "name": "xincansi",
+  "version": "1.0.0",
+  "description": "You can use the (https://markeboluo.github.io/XinCanSi/) to preview the content.",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack --watch",
+    "start": "webpack-dev-server --open --mode production",
+    "build": "webpack --mode production",
+    "dev": "webpack --mode development& webpack-dev-server --open --mode development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarKeBoLuo/XinCanSi.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MarKeBoLuo/XinCanSi/issues"
+  },
+  "homepage": "https://github.com/MarKeBoLuo/XinCanSi#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.7.5",
+    "@babel/core": "^7.7.5",
+    "@babel/plugin-proposal-class-properties": "^7.7.4",
+    "@babel/preset-env": "^7.7.6",
+    "@babel/preset-react": "^7.7.4",
+    "babel-loader": "^8.0.6",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.3.2",
+    "file-loader": "^5.0.2",
+    "html-webpack-plugin": "^3.2.0",
+    "node-sass": "^4.13.0",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.0.1",
+    "url-loader": "^3.0.0",
+    "webpack": "^4.41.3",
+    "webpack-cli": "^3.3.10",
+    "webpack-command": "^0.5.0",
+    "webpack-dev-server": "^3.9.0"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.7.0",
+    "antd": "^3.26.3",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  }
+}
