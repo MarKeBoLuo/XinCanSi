@@ -14,7 +14,7 @@ module.exports = {
         rules: [
             {
                 test: /\.css$/,
-                use:"style-loader!css-loader"
+                use: ["style-loader", "css-loader"]
             },
             {
                 test: /\.scss$/,
@@ -31,7 +31,7 @@ module.exports = {
                 use: ['file-loader'],
                 // options: {
                 //     limit: 10000,
-                //     name: 'img/[name].[hash:7].[ext]'
+                //     name: 'src/assets/img/[name].[hash:7].[ext]'
                 // }
             }
         ]
