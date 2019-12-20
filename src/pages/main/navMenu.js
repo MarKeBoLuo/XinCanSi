@@ -12,8 +12,24 @@ let menuData = [
     { name: '工作台', key: 'working', icon: 'table' },
     { name: '中心平台', key: 'center', icon: 'qrcode' },
     { name: '个人信息', key: 'person', icon: 'team', children: [
-        { name: '个人基本信息', key: 'personBase', icon: 'qrcode' },
-        { name: '密码修改', key: 'personPassword', icon: 'qrcode' },
+        {
+            name: '个人集合',
+            key: 'personCount',
+            icon: 'item',
+            children: [
+                { name: '个人基本信息', key: 'personBase', icon: 'qrcode' },
+                { name: '密码修改', key: 'personPassword', icon: 'qrcode' },
+            ]
+        },
+        {
+            name: '个人主页',
+            key: 'personMain',
+            icon: 'item',
+            children: [
+                { name: '个人基本信息', key: 'personBase', icon: 'qrcode' },
+                { name: '密码修改', key: 'personPassword', icon: 'qrcode' },
+            ]
+        }
     ] },
 ]
 
@@ -26,7 +42,18 @@ let menuArr = menuData.map((o, i) => {
                     {o.name}
                 </span>
             } key={o.key}>
-                {o.children.map(k => <Menu.Item key={k.key}><Icon type={k.icon} />{k.name}</Menu.Item>)}
+                {o.children.map(k => {
+                    return (
+                        <Menu.ItemGroup title={
+                            <span>
+                                <Icon type={k.icon} />
+                                {k.name}
+                            </span>
+                        } key={k.key}>
+                            {k.children.map(i => <Menu.Item key={i.key}><Icon type={i.icon} />{i.name}</Menu.Item>)}
+                        </Menu.ItemGroup>
+                    )
+                })}
             </SubMenu>
         )
     } else {

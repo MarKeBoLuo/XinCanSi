@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Button, Icon } from 'antd'
 import DropMenu from '../main/dropMenu'
 import NavMenu from '../main/navMenu'
+import FormArea from '../main/formArea'
 export default class Home extends Component {
     constructor(props) {
         super(props)
@@ -32,6 +33,8 @@ export default class Home extends Component {
                     <section>{ DropMenu }</section>
                     <h2>导航菜单</h2>
                     <section>{ NavMenu }</section>
+                    <h2>表单</h2>
+                    <section>{FormArea}</section>
                 </section>
             </section>
         )
