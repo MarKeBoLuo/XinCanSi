@@ -1,7 +1,26 @@
+.text-center{
+    text-align: center;
+}
+.text-i-10{
+    text-indent: 40px;
+}
 .cusList{
     margin-bottom: 10px;
-    span{
+    >span{
         display: inline-block;
+        text-indent: 10px;
         width: 200px;
+    }
+    button{
+        width: 100px;
+    }
+}
+.content{
+    padding: 0 40px;
+}
+.headerInfo{
+    color: #fff;
+    h1{
+        color: inherit;
     }
 }

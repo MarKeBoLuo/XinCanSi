@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ReactDom from 'react-dom';
+import { Row, Col, Layout } from 'antd'
 import 'antd/dist/antd.css';
 import './assets/scss/index.scss';
 import Home from './pages/login/index'
@@ -10,10 +11,20 @@ class App extends Component {
         this.state = {};
     }
     render() {
+        const { Header, Footer, Content } = Layout
         return (
             <div>
-                <p>welcome to React</p>
-                <section id="home"></section>
+                <Layout>
+                    <Header className="headerInfo">
+                        <h1 className="text-center">Welcome To React</h1>
+                    </Header>
+                    <Content>
+                        <section id="home"></section>
+                    </Content>
+                    <Footer className="text-center">
+                        这是底部信息
+                    </Footer>
+                </Layout>
             </div>
         )
     }

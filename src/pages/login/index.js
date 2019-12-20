@@ -1,31 +1,38 @@
 import React, { Component } from 'react'
-import { Button } from 'antd'
-let data = [
-    { name: '数组第一项', id: 333, },
-    { name: '数组第二项', id: 111, }
-]
+import { Button, Icon } from 'antd'
+import DropMenu from '../main/dropMenu'
+import NavMenu from '../main/navMenu'
 export default class Home extends Component {
     constructor(props) {
         super(props)
+        this.data = [
+            { name: '数组第一项', id: 333, },
+            { name: '数组第二项', id: 111, }
+        ]
     }
     output(obj, index) {
         console.log(obj, index)
     }
     render() {
-        let menu = data.map((o ,i) => 
-            <section className="cusList" key={i}>
+        let menuList = this.data.map((o ,i) => 
+            <section className="cusList" key={o.id}>
                 <span>{o.name}</span>
-                <Button type="primary" onClick={this.output.bind(this, o, i)}>
+                <Button type="primary" size="small" onClick={this.output.bind(this, o, i)}>
+                    <Icon type="eye" />
                     点击输出
                 </Button>
             </section>
         )
         return (
             <section>
-                <h1>React world</h1>
-                <address>四川省成都市高新区孵化园</address>
-                <p>Welcome to react world.</p>
-                <section>{ menu }</section>
+                <h2 className="text-i-10">React world</h2>
+                <section className="content">
+                    { menuList }
+                    <h2>Antd World</h2>
+                    <section>{ DropMenu }</section>
+                    <h2>导航菜单</h2>
+                    <section>{ NavMenu }</section>
+                </section>
             </section>
         )
     }
